@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Todo App</title>
+</head>
+<body>
+    <main class="app-shell">
+        <header class="app-header">
+            <p class="eyebrow">Daily Focus</p>
+            <h1>Todo App</h1>
+            <p class="subtitle">Capture what matters and clear it out, one task at a time.</p>
+
+            <div class="theme-row">
+                <label for="theme-select">Theme</label>
+                <select id="theme-select">
+                    <optgroup label="Nature Themes">
+                        <option value="sand">Warm Sand</option>
+                        <option value="forest">Forest Canopy</option>
+                        <option value="ocean">Ocean Breeze</option>
+                        <option value="sunset">Sunset Meadow</option>
+                        <option value="rainforest">Rainforest Mist</option>
+                        <option value="arctic">Arctic Sky</option>
+                    </optgroup>
+                    <optgroup label="Other Themes">
+                        <option value="mono">Monochrome</option>
+                        <option value="candy">Candy Pop</option>
+                        <option value="coffee">Coffee House</option>
+                        <option value="midnight">Midnight Neon</option>
+                        <option value="retro">Retro Arcade</option>
+                        <option value="ember">Ember Glow</option>
+                    </optgroup>
+                </select>
+            </div>
+        </header>
+
+        <form class="todo-form" onsubmit="return getTodo()">
+            <label for="todo" class="sr-only">Add todo</label>
+            <input type="text" id="todo" placeholder="Add a task...">
+            <input type="submit" value="Add">
+        </form>
+
+        <section class="meta-row">
+            <p id="todo-count">0 tasks</p>
+        </section>
+
+        <div id="container" class="todo-grid"></div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
